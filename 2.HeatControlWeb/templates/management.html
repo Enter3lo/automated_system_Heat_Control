@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки ТеплоКонтроль</title>
+    <link rel="stylesheet" href="/static/css/style_management.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/main">
+            Управление температурой
+        </a>
+        <a href="/temperature_graph">
+            График
+        </a>
+        <a href="/management">
+            Настройки
+        </a>
+    </nav>
+    <main>
+        <div>
+            <label style="margin: 0px;">Настройки</label>
+            <div class="setting">
+                <label>
+                    Минимальное значение
+                    <input type="text" id="min_value" min="0" max="85">
+                </label>
+                <label>
+                    Предминимальное значение
+                    <input type="text" id="premin_value" min="0" max="85">
+                </label>
+                <label>
+                    Предмаксимальное значение
+                    <input type="text" id="premax_value" min="0" max="85">
+                </label>
+                <label>
+                    Максимальное значение
+                    <input type="text" id="max_value" min="0" max="85">
+                </label>
+                <!--<button>Диагностика</button>-->
+                <div class="cancle_or_save">
+                    <button id="reset">Сброс</button>
+                    <button id="cancle">Отмена</button>
+                    <button id="save">Сохранить</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label style="margin: 0px;">Тестирование</label>
+            <div class="setting">
+                <div class="test">
+                    <label style="margin: 0px;">
+                        Значение температуры
+                        <input type="text" id="temp">
+                    </label>
+                    <button id="set">Отправить</button>
+                </div>
+                <label style="margin-top: 30px;">
+                    Процент открытия заслонки
+                    <input type="text" id="persent_damfer" style="width:100px;" disabled>
+                </label>
+                <label style="margin-bottom: 10px;">
+                    Угол поворота заслонки
+                    <input type="text" id="degree_damfer" disabled>
+                </label>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/managment.js"></script>
+</body>
+
+</html>

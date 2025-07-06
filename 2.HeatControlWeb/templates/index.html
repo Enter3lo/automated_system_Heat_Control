@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Управление затвором термического участка</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/main">
+            Управление температурой
+        </a>
+        <a href="/temperature_graph">
+            График
+        </a>
+        <a href="/management">
+            Настройки
+        </a>
+    </nav>
+    <div class="main">
+        <div class="temp">
+            <h1>Температура</h1>
+            <h1 id="temperature">{{ temperature }} °C</h1>
+        </div>
+        <div class="persentOpen">
+            <input class="slider" id="persentOpen" type="range" min="0" max="100" step="1" value="{{persent}}">
+            <input type="text" id="valueRange" pattern="^\d+%?$">
+        </div>
+    </div>
+    <div class="autoRegulation">
+        <input type="checkbox" id="autoRegulation" />
+        <label for="autoRegulation"> Автоматическое регулирование заслонки</label>
+    </div>
+    <script src="/static/js/index.js"></script>
+
+</body>
+
+</html>

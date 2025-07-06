@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>График температуры</title>
+    <link rel="stylesheet" href="/static/css/style_temperature_graph.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/main">
+            Управление температурой
+        </a>
+        <a href="/temperature_graph">
+            График
+        </a>
+        <a href="/management">
+            Настройки
+        </a>
+    </nav>
+    <main>
+        <div class="graph">
+            <canvas id="graph" width="max-content" height="max-content"></canvas>
+        </div>
+    </main>
+    <footer>
+        <label>
+        Выберите дату:
+        <input type="text" id="dateForGener" placeholder="01.01.2001">
+        </label>        
+        <button id="generateButton">Создать</button>
+    </footer>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/dist/date-fns.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>   <script src="/static/js/temperature_graph.js"></script>
+</body>
+
+</html>

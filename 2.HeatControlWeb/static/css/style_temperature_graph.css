@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    /* Убираем отступы */
+    width: 100%;
+    height: 100vh;
+    /* Занимает всю высоту окна */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    /* Три строки: навигация, основной контент, футер */
+    justify-items: center;
+}
+
+nav {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    font-size: 2em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #F0512C;
+    border-radius: 10px;
+    background-color: rgba(240, 82, 44, 0.5);
+}
+
+nav a:hover {
+    background-color: #73BBEB;
+    border: 1px solid #73BBEB;
+}
+
+main {
+    grid-row: 2 / 2;
+    /* Вторая строка для основного контента */
+    grid-column: 1 / 4;
+    /* Занимает все три колонки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Добавляем отступы для основного контента */
+}
+
+.graph {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    grid-row: 3 / 3;
+    grid-column: 1 / 4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    font-size: 2em;
+}
+
+footer label {
+    text-wrap: nowrap;
+    margin-right: 7px;
+}
+
+footer input[type="text"] {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #F0512C;
+    background-color: rgba(240, 82, 44, 0.5);
+    color: white;
+    width: 250px;
+}
+
+footer button {
+    border: 1px solid #F0512C;
+    background-color: rgba(240, 82, 44, 1);
+    border-radius: 4px;
+    width: 162px;
+    height: 50px;
+    color: white;
+    font-size: 1.2em;
+}
+
+footer button:hover {
+    background-color: #73BBEB;
+    border: 1px solid #73BBEB;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .graph {
+        width: 100%;
+        /* Увеличиваем ширину графика на мобильных устройствах */
+        height: 400px;
+        /* Увеличиваем высоту графика на мобильных устройствах */
+    }
+
+
+}

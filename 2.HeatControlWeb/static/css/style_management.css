@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    /* Убираем отступы */
+    width: 100%;
+    height: 100vh;
+    /* Занимает всю высоту окна */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    /* Три строки: навигация, основной контент, футер */
+    justify-items: center;
+}
+
+nav {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    font-size: 2em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #F0512C;
+    border-radius: 10px;
+    background-color: rgba(240, 82, 44, 0.5);
+}
+
+nav a:hover {
+    background-color: #73BBEB;
+    border: 1px solid #73BBEB;
+}
+
+main {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    label {
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    .simulation input[type="number"] {
+        font-size: 30px;
+        width: 80px;
+        margin-left: 10px;
+    }
+
+    .simulation input[type="number"] {
+        width: 120px;
+    }
+
+    .simulation {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    button {
+        border: 1px solid #F0512C;
+        background-color: rgba(240, 82, 44, 1);
+        border-radius: 4px;
+        width: 200px;
+        height: 65px;
+        color: white;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    button:hover {
+        background-color: #73BBEB;
+        border: 1px solid #73BBEB;
+    }
+
+    div #save {
+        border: 1px solid #73BBEB;
+        background-color: #73BBEB;
+        border-radius: 4px;
+        width: 100%;
+        height: 65px;
+        color: white;
+        font-size: 30px;
+    }
+
+    #save:hover {
+        background-color: rgba(240, 82, 44, 1);
+        border: 1px solid #F0512C;
+    }
+
+    input[type="checkbox"] {
+        height: 40px;
+        width: 40px;
+        accent-color: #F0512C;
+    }
+
+    .cancle_or_save {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cancle_or_save button {
+        width: 100%;
+    }
+
+    .setting {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .test {
+        display: flex;
+        align-items: center;
+
+        #set {
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+        }
+
+        #temp {
+            margin-right: 20px;
+        }
+    }
+
+    #damper_visual {
+        margin: 0 auto 0 auto;
+        /* сверху 40px, слева и справа auto для центрирования */
+        display: flex;
+        justify-content: center;
+    }
+}
